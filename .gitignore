@@ -133,6 +133,7 @@ dmypy.json
 
 # Personal Data
 /data/personal_data
+*_personal*
 
 # misc
 .DS_Store

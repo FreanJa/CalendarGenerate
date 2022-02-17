@@ -19,11 +19,19 @@ patt2 = r"\n(.*)\n"
 patt3 = r"\n(.*)"
 patt4 = "\$\(\S+?\)"
 patt5 = "\$\((\S+?)\)"
+patt6 = "\(.*\)"
+
+Alarm = '''
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT{}M
+END:VALARM
+'''
 
 path = "./data/"
 json_path = "./generated_file/json/"
 ics_path = "./generated_file/ics/"
-default_alarm = ["15M", "30M"]
+default_alarm = ["15", "30"]
 
 
 def read_pdf(full_path):
@@ -40,9 +48,8 @@ def read_pdf(full_path):
                         for t in tmp:
                             if t == '':
                                 continue
-                            if re.match("教学班:", t) or re.match("周学时:", t) or re.match("周学时:", t) or \
-                                    re.match("总学时:", t) or re.match("学分:", t) or re.match("周数:", t) or \
-                                    re.match("地点:", t) or re.match("教师:", t):
+                            if re.match("教学班:", t) or re.match("周数:", t) or re.match("地点:", t) \
+                                    or re.match("教师:", t):
                                 continue
                             course.append(t)
                     else:
@@ -52,14 +59,20 @@ def read_pdf(full_path):
     return None
 
 
-def json_format(full_path, start_time, save=json_path, alarm=None):
+def json_format(full_path, start_time, alarm=None, save=json_path, ):
     if alarm is None:
         alarm = default_alarm
+    VALARM = []
+    if alarm:
+        for item in alarm:
+            if item:
+                VALARM.append(Alarm.format(item))
+
     calender = {}
     day_sche = {}
     courses = {}
     course = {"Course": "", "StartTime": "", "EndTime": "", "StartDate": "",
-              "EndDate": "", "Location": "", "Description": ""}
+              "EndDate": "", "Location": "", "Description": "", "Frequency": "1"}
     week = ""
     time = ""
     last = ""
@@ -78,6 +91,7 @@ def json_format(full_path, start_time, save=json_path, alarm=None):
             )
             calender["Semester"] = semester
         else:
+            # print(info[i])
             if info[i][0]:
                 if re.match("实践课程：", info[i][0]):
                     for item in info[i]:
@@ -124,7 +138,6 @@ def json_format(full_path, start_time, save=json_path, alarm=None):
             course["Description"] = info[i][4]
 
             if last != "" and last != week:
-                # calender[last] = copy.deepcopy(day_sche)
                 courses[last] = copy.deepcopy(day_sche)
                 day_sche.clear()
 
@@ -134,11 +147,17 @@ def json_format(full_path, start_time, save=json_path, alarm=None):
             else:
                 get_course_name = False
 
+            if re.search(patt6, info[i][2]):
+                course["Frequency"] = "2"
+            else:
+                course["Frequency"] = "1"
+
             week_during = re.findall(patt1, info[i][2])
             course["StartDate"] = cal_date(start_time, int(week_during[0]), week)
             course["EndDate"] = cal_date(start_time, int(week_during[1]), week)
 
-            s_section, e_section = re.findall(r"[0-9]+", time)
+            s_section, e_section = re.findall(r"[0-9]+", time)[:2]
+
             if re.match("3", course["Location"]) or re.match("2-S", course["Location"]):
                 course["StartTime"] = Time_S[s_section][0]
                 course["EndTime"] = Time_S[e_section][1]
@@ -148,19 +167,16 @@ def json_format(full_path, start_time, save=json_path, alarm=None):
 
             day_sche[time] = copy.deepcopy(course)
 
-    # calender[week] = copy.deepcopy(day_sche)
     courses[week] = copy.deepcopy(day_sche)
     calender["Courses"] = courses
     calender["Practical_courses"] = practical_courses
     calender["Other_courses"] = other_courses
-    calender["Alarm"] = alarm
+    calender["VALARM"] = VALARM
 
     generate_file = "{}{}.json".format(save, calender["Semester"])
     with open(generate_file, "w", encoding='utf-8') as f:
         json.dump(calender, f, ensure_ascii=False)
         print('[Success] Save json data in "{}"'.format(generate_file))
-
-    json_to_ics(calender)
 
     return calender
 
@@ -173,7 +189,7 @@ def cal_date(start, during, week):
 
 
 def json_to_ics(json_data, save=ics_path):
-    dict_data = {}
+
     if isinstance(json_data, str):
         with open(json_data, "r", encoding="utf-8") as f:
             dict_data = json.load(f)
@@ -185,16 +201,13 @@ def json_to_ics(json_data, save=ics_path):
 
     with open("./data/iCal_test.ics", "r", encoding="utf8") as fo:
         save_dir = save + "{}/".format(dict_data["Semester"])
+        VALARM = dict_data["VALARM"]
         if not os.path.exists(save_dir):
             os.makedirs(save_dir)
 
         for week, day in dict_data.get("Courses").items():
 
-            print(day)
-
             for time, course in day.items():
-
-                print(course)
 
                 class_name = course["Course"]
 
@@ -211,16 +224,21 @@ def json_to_ics(json_data, save=ics_path):
                         findall = re.findall(patt4, w_line)
                         if findall:
                             for elem in findall:
-                                print(elem)
+                                if elem == "$(VALARM)":
+                                    alarm = ""
+                                    for item in VALARM:
+                                        alarm += item
+                                    w_line = w_line.replace(elem, alarm)
+                                    continue
                                 w_line = w_line.replace(elem, course.get(re.findall(patt5, elem)[0]))
-                                print(w_line)
                         fi.write(w_line)
+                    print('[Success] Generate "{}"'.format(full_file_path))
                     fo.seek(0, 0)
     return
 
 
 if __name__ == '__main__':
-    # filename = "2020-2021-2.pdf"
-    # start_date = "20200301"
-    # data = json_format(path + filename, start_date)
-    json_to_ics("./generated_file/json/2020-2021-2.json")
+    filename = "2021-2022-1.pdf"
+    start_date = "20210906"
+    data = json_format("{}personal_data/{}".format(path, filename), start_date)
+    # json_to_ics("./generated_file/json/2020-2021-2.json")

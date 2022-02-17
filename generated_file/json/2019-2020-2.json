@@ -9,7 +9,8 @@
         "StartDate": "20200217",
         "EndDate": "20200601",
         "Location": "2-S338",
-        "Description": "谢怡"
+        "Description": "谢怡",
+        "Frequency": "1"
       },
       "3-5": {
         "Course": "面向对象程序设计A★",
@@ -18,7 +19,8 @@
         "StartDate": "20200217",
         "EndDate": "20200601",
         "Location": "2-N426",
-        "Description": "黄炯"
+        "Description": "黄炯",
+        "Frequency": "1"
       },
       "6-7": {
         "Course": "形势与政策★",
@@ -27,7 +29,8 @@
         "StartDate": "20200427",
         "EndDate": "20200518",
         "Location": "未排地点",
-        "Description": "王茜,张维标"
+        "Description": "王茜,张维标",
+        "Frequency": "1"
       }
     },
     "Tue": {
@@ -38,7 +41,8 @@
         "StartDate": "20200218",
         "EndDate": "20200602",
         "Location": "2-N129",
-        "Description": "田秋红"
+        "Description": "田秋红",
+        "Frequency": "1"
       },
       "6-7": {
         "Course": "高等数学A2★",
@@ -47,7 +51,8 @@
         "StartDate": "20200218",
         "EndDate": "20200602",
         "Location": "2-N219",
-        "Description": "张孝惠"
+        "Description": "张孝惠",
+        "Frequency": "1"
       },
       "8-9": {
         "Course": "学科专题讲座★",
@@ -56,7 +61,8 @@
         "StartDate": "20200218",
         "EndDate": "20200407",
         "Location": "2-N115",
-        "Description": "宋滢,林翔宇,骆淑云,张涵翠,相东明,江明月,林望"
+        "Description": "宋滢,林翔宇,骆淑云,张涵翠,相东明,江明月,林望",
+        "Frequency": "1"
       },
       "10-12": {
         "Course": "插花艺术★",
@@ -65,7 +71,8 @@
         "StartDate": "20200225",
         "EndDate": "20200505",
         "Location": "3-N104",
-        "Description": "骆菁菁"
+        "Description": "骆菁菁",
+        "Frequency": "1"
       }
     },
     "Wed": {
@@ -76,7 +83,8 @@
         "StartDate": "20200219",
         "EndDate": "20200603",
         "Location": "万人体育场散打房",
-        "Description": "曾平"
+        "Description": "曾平",
+        "Frequency": "1"
       },
       "3-4": {
         "Course": "英语4★",
@@ -85,7 +93,8 @@
         "StartDate": "20200226",
         "EndDate": "20200603",
         "Location": "2-N307",
-        "Description": "谢怡"
+        "Description": "谢怡",
+        "Frequency": "2"
       },
       "10-12": {
         "Course": "社会学与生活★",
@@ -94,7 +103,8 @@
         "StartDate": "20200226",
         "EndDate": "20200506",
         "Location": "2-N119",
-        "Description": "朱麟飞"
+        "Description": "朱麟飞",
+        "Frequency": "1"
       }
     },
     "Thur": {
@@ -105,7 +115,8 @@
         "StartDate": "20200220",
         "EndDate": "20200604",
         "Location": "2-N219",
-        "Description": "张孝惠"
+        "Description": "张孝惠",
+        "Frequency": "1"
       },
       "6-8": {
         "Course": "马克思主义基本原理概论★",
@@ -114,7 +125,8 @@
         "StartDate": "20200220",
         "EndDate": "20200604",
         "Location": "未排地点",
-        "Description": "范冰川"
+        "Description": "范冰川",
+        "Frequency": "1"
       },
       "10-12": {
         "Course": "中国近现代史纲要★",
@@ -123,7 +135,8 @@
         "StartDate": "20200220",
         "EndDate": "20200604",
         "Location": "未排地点",
-        "Description": "贺俊杰"
+        "Description": "贺俊杰",
+        "Frequency": "1"
       }
     }
   },
@@ -133,8 +146,8 @@
   "Other_courses": [
     "面向对象程序设计A○黄炯,霍戌文(共16周)/1-16周/无;"
   ],
-  "Alarm": [
-    "15M",
-    "30M"
+  "VALARM": [
+    "\nBEGIN:VALARM\nACTION:AUDIO\nTRIGGER:-PT15M\nEND:VALARM\n",
+    "\nBEGIN:VALARM\nACTION:AUDIO\nTRIGGER:-PT30M\nEND:VALARM\n"
   ]
 }
