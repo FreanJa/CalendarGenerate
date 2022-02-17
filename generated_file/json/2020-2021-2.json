@@ -1,0 +1,185 @@
+{
+  "Semester": "2020-2021-2",
+  "Courses": {
+    "Mon": {
+      "3-5": {
+        "Course": "概率论及数理统计A*★",
+        "StartTime": "101500",
+        "EndTime": "123500",
+        "StartDate": "20200301",
+        "EndDate": "20200614",
+        "Location": "3-N101",
+        "Description": "陈优优"
+      },
+      "6-7": {
+        "Course": "计算机组成原理*★",
+        "StartTime": "133000",
+        "EndTime": "150500",
+        "StartDate": "20200301",
+        "EndDate": "20200614",
+        "Location": "10-130",
+        "Description": "李俊松"
+      },
+      "10-11": {
+        "Course": "形势与政策★",
+        "StartTime": "183000",
+        "EndTime": "200500",
+        "StartDate": "20200524",
+        "EndDate": "20200614",
+        "Location": "10-221",
+        "Description": "司浩杰"
+      },
+      "10-12": {
+        "Course": "数据、模型与决策-管理软件实践○",
+        "StartTime": "183000",
+        "EndTime": "205500",
+        "StartDate": "20200308",
+        "EndDate": "20200517",
+        "Location": "25-211",
+        "Description": "周晓林"
+      }
+    },
+    "Tue": {
+      "3-5": {
+        "Course": "普通物理A2★",
+        "StartTime": "101500",
+        "EndTime": "123500",
+        "StartDate": "20200302",
+        "EndDate": "20200615",
+        "Location": "3-N304",
+        "Description": "祝华"
+      },
+      "6-7": {
+        "Course": "英语国家文化概况★",
+        "StartTime": "133000",
+        "EndTime": "150500",
+        "StartDate": "20200302",
+        "EndDate": "20200615",
+        "Location": "2-S246",
+        "Description": "杨渝旸"
+      },
+      "8-9": {
+        "Course": "创业基础★",
+        "StartTime": "151500",
+        "EndTime": "165000",
+        "StartDate": "20200302",
+        "EndDate": "20200420",
+        "Location": "2-S515",
+        "Description": "许联"
+      },
+      "10-12": {
+        "Course": "计算机网络*★",
+        "StartTime": "183000",
+        "EndTime": "205500",
+        "StartDate": "20200302",
+        "EndDate": "20200615",
+        "Location": "2-N106",
+        "Description": "夏劲松"
+      }
+    },
+    "Wed": {
+      "1-2": {
+        "Course": "足球(初级)★",
+        "StartTime": "081000",
+        "EndTime": "094500",
+        "StartDate": "20200303",
+        "EndDate": "20200616",
+        "Location": "北田径场",
+        "Description": "夏亮"
+      },
+      "3-5": {
+        "Course": "C#程序设计*★",
+        "StartTime": "101500",
+        "EndTime": "123500",
+        "StartDate": "20200303",
+        "EndDate": "20200616",
+        "Location": "2-S518",
+        "Description": "郑军红"
+      },
+      "10-12": {
+        "Course": "算法分析与设计*★",
+        "StartTime": "183000",
+        "EndTime": "205500",
+        "StartDate": "20200303",
+        "EndDate": "20200616",
+        "Location": "2-S456",
+        "Description": "张涵翠"
+      }
+    },
+    "Thur": {
+      "1-2": {
+        "Course": "计算机组成原理*★",
+        "StartTime": "081000",
+        "EndTime": "094500",
+        "StartDate": "20200304",
+        "EndDate": "20200617",
+        "Location": "10-130",
+        "Description": "李俊松"
+      },
+      "3-5": {
+        "Course": "JAVA程序设计*★",
+        "StartTime": "101500",
+        "EndTime": "123500",
+        "StartDate": "20200304",
+        "EndDate": "20200617",
+        "Location": "2-S222",
+        "Description": "丁佐华"
+      },
+      "6-7": {
+        "Course": "职业发展与就业指导★",
+        "StartTime": "133000",
+        "EndTime": "150500",
+        "StartDate": "20200304",
+        "EndDate": "20200422",
+        "Location": "2-S423",
+        "Description": "齐佳婷,朱玉娇"
+      },
+      "8-9": {
+        "Course": "概论(2)★",
+        "StartTime": "151500",
+        "EndTime": "165000",
+        "StartDate": "20200304",
+        "EndDate": "20200617",
+        "Location": "2-S315",
+        "Description": "高永良"
+      },
+      "10-11": {
+        "Course": "社会实践○",
+        "StartTime": "183000",
+        "EndTime": "200500",
+        "StartDate": "20200610",
+        "EndDate": "20200617",
+        "Location": "2-S243",
+        "Description": "楼倚杉,黄君"
+      }
+    },
+    "Fri": {
+      "6-8": {
+        "Course": "汇编语言A*★",
+        "StartTime": "133000",
+        "EndTime": "160000",
+        "StartDate": "20200305",
+        "EndDate": "20200618",
+        "Location": "2-S430",
+        "Description": "付峰"
+      }
+    }
+  },
+  "Practical_courses": [
+    "生产实习●许立成(共2周)/17-18周;",
+    "计算机组成原理课程设计*●杨东鹤,李俊松(共1周)/18周;"
+  ],
+  "Other_courses": [
+    "创业基础○许联(共8周)/9-16周/无;",
+    "汇编语言A*○付峰(共16周)/1-16周/无;",
+    "C#程序设计*○郑军红(共16周)/1-16周/无;",
+    "计算机网络*○夏劲松(共16周)/1-16周/无;",
+    "JAVA程序设计*○丁佐华,吴婷婷(共16周)/1-16周/无;",
+    "计算机组成原理*○李俊松,杨东鹤(共16周)/1-16周/无;",
+    "算法分析与设计*○肖荣(共16周)/1-16周/无;"
+  ],
+  "Alarm": [
+    "15M",
+    "30M"
+  ]
+}
