@@ -24,6 +24,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 LOCATION:$(Location)
 DESCRIPTION:$(Description)
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:DISABLED
 DTSTART;TZID=Asia/Shanghai:$(StartDate)T$(StartTime)
 DTEND;TZID=Asia/Shanghai:$(StartDate)T$(EndTime)
 SUMMARY:$(Course)
