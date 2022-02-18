@@ -1,16 +1,14 @@
 # 日历生成 CalendarGenerate ( for Zstuer )
 
-<img src="https://img.shields.io/badge/PDF2ICS-zstuer-orange?style=flat&logo=python"><img src ="https://img.shields.io/badge/For-MacOS-blue?style=flat&logo=apple"> <img src= "https://img.shields.io/badge/For-iOS-blue?style=flat&logo=apple">
+<img src="https://img.shields.io/badge/PDF2ICS-zstuer-orange?style=flat&logo=python"> <img src ="https://img.shields.io/badge/For-MacOS-blue?style=flat&logo=apple"> <img src= "https://img.shields.io/badge/For-iOS-blue?style=flat&logo=apple">
 
-> 根据 浙江理工大学 教务系统导出的 pdf 课表 自动生成 .json文件 以及 .ics 文件
->
-> generate .ics file from pdf (zstu course scheduel format)
+> 根据zstu教务系统下载的pdf课表，生成json和ics文件，方便批量导入到个人日历软件
 
-根据zstu教务系统下载的pdf课表，生成json和ics文件，方便批量导入到个人日历软件
-
-A project that can let ZSTU Educational administration system exported pdf schedule file automatically generates ics files to import into the system calendar
+> A project that can let ZSTU Educational administration system exported pdf schedule file automatically generates ics files to import into the system calendar
 
 ---
+
+</br>
 
 ## 🤔 Why do this
 
@@ -38,15 +36,13 @@ Apple 全家桶下直接使用系统日历真的太香了，但每学期开学�
 
 </br>
 
-</br>
-
 总之最后选择了直接读pdf文件，试了几个py的pdf库之后，用了 **pdfplumber**，读中文文档很友好 👍，如果是读中文文档的话非常推荐使用
 
 然后就是最痛苦的部分，生成**JSON**文件，我想到过pdf转文字生成的列表会很混乱，没想到会乱成这种，在我整理的要放弃的时候，发现教务系统支持倒出的pdf里面竟然有一种列表样式的，果断换了列表的，磕磕绊绊总算是把JSON文件生成好了。~然后开学已经一个月了，我就再也没点开过这个Project😅~
 
 寒假又换了台新电脑，开学的时候写的文件忘记备份了，也没传github，好嘛直接重写🥲
 
-
+</br>
 
 Anyway，在寒假的末尾花了两三天算是搞完了，总结下整个过程：
 
