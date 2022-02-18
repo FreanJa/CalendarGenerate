@@ -12,8 +12,6 @@ A project that can let ZSTU Educational administration system exported pdf sched
 
 ---
 
-
-
 ## 🤔 Why do this
 
 Apple 全家桶下直接使用系统日历真的太香了，但每学期开学导课表真的要了命了，无意间少数派看到个[帖子](https://sspai.com/post/39645)提醒了我，我是学 计算机的 ~~菜狗~~ 啊
@@ -24,7 +22,11 @@ Apple 全家桶下直接使用系统日历真的太香了，但每学期开学�
 * 原作者生成的日历格式和我想要的不太一样 
 * ~~装 X~~
 
+</br>
 
+</br>
+
+</br>
 
 ## 👩🏻‍🔬 Programming
 
@@ -54,6 +56,10 @@ Anyway，在寒假的末尾花了两三天算是搞完了，总结下整个过�
 
 
 
+
+
+
+
 ##  💡 How to use
 
 > 介绍下怎么使用，虽然感觉没啥好介绍的，之后有空的话🐦会直接在博客上开个接口，上传课表直接返回一个ics
@@ -72,21 +78,25 @@ Anyway，在寒假的末尾花了两三天算是搞完了，总结下整个过�
 
 下面跑一次代码，可供参考
 
-<img src="https://pic.freanja.cn/images/2022/02/18/202202181653293.png" alt="截屏2022-02-18 16.51.23" style="zoom:40%;" />
+<img src="https://github.com/FreanJa/CalendarGenerate/data/pic/202202181653293.png" alt="截屏2022-02-18 16.51.23" style="zoom:40%;" />
 
 ⬆️ 运行完成后可以查看给出的路径是否有生成的文件
 
 
 
-<img src="https://pic.freanja.cn/images/2022/02/18/202202181654921.png" alt="截屏2022-02-18 16.52.37" style="zoom:40%;" />
+<img src="https://github.com/FreanJa/CalendarGenerate/data/pic/202202181654921.png" alt="截屏2022-02-18 16.52.37" style="zoom:40%;" />
 
 ⬆️ 点开ics文件，选择 **新建日历**，会自动根据学期创建一个新的日历（当然你也可以选择已有的日历）
 
 
 
-<img src="https://pic.freanja.cn/images/2022/02/18/202202181656614.png" alt="截屏2022-02-18 16.52.59" style="zoom:40%;" />
+<img src="https://github.com/FreanJa/CalendarGenerate/data/pic/202202181656614.png" alt="截屏2022-02-18 16.52.59" style="zoom:40%;" />
 
 ⬆️ 这是导入后的样式，我点开了我那门双周的英语课，你可以在 **每2周重复** 处修改你的重复规则
+
+
+
+
 
 
 
@@ -98,12 +108,15 @@ Anyway，在寒假的末尾花了两三天算是搞完了，总结下整个过�
 
 
 
-## 💫 From [FreanJa](https://github.com/freanja)
 
-----
 
-## 🥳 The End
 
-<h2 style="text-align:center;"><a href="https://www.tumblr.com/blog/view/1041uuu">Awesome 8 Bit</a></h2>
+
+##  💫 The End
+
+<center><a href="https://www.tumblr.com/blog/view/1041uuu">Awesome 8 Bit</a></center>
 
 <img src="https://pic.freanja.cn/images/2022/02/18/tumblr_fd1f4b85160a4cdd83c0a23d17ca6029_8b2a21fc_500.gif">
+
+-----
+
