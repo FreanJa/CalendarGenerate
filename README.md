@@ -1,8 +1,6 @@
 # 日历生成 CalendarGenerate ( for Zstuer )
 
-https://img.shields.io/badge/PDF2ICS-zstuer-orange?style=flat&logo=python
-
-https://img.shields.io/badge/For-MacOS-blue?style=flat&logo=apple https://img.shields.io/badge/For-iOS-blue?style=flat&logo=apple
+<img src="https://img.shields.io/badge/PDF2ICS-zstuer-orange?style=flat&logo=python"><img src ="https://img.shields.io/badge/For-MacOS-blue?style=flat&logo=apple"> <img src= "https://img.shields.io/badge/For-iOS-blue?style=flat&logo=apple">
 
 > 根据 浙江理工大学 教务系统导出的 pdf 课表 自动生成 .json文件 以及 .ics 文件
 >
@@ -96,7 +94,7 @@ Anyway，在寒假的末尾花了两三天算是搞完了，总结下整个过�
 
 ## 🤝 Connect with Me
 
-[https://img.shields.io/badge/MyBlog-blog.freanja.cn-critical?style=flat&logo=about.me&logoColor=3498db](https://blog.freanja.cn) [https://img.shields.io/badge/Email-freanja.l@gmail.com-critical?style=flat&logo=gmali&logoColor=3498db](mailto:freanja.l@gamil.com) [https://img.shields.io/badge/Github-blog.freanja.cn-critical?style=flat&logo=github&logoColor=3498db](https://www.github.com/freanja)
+[<img src="https://img.shields.io/badge/MyBlog-blog.freanja.cn-critical?style=flat&logo=about.me&logoColor=3498db">](https://blog.freanja.cn) [<img src="https://img.shields.io/badge/Email-freanja.l@gmail.com-critical?style=flat&logo=Gmail&logoColor=3498db">](mailto:freanja.l@gamil.com) [<img src="https://img.shields.io/badge/Github-blog.freanja.cn-critical?style=flat&logo=github&logoColor=3498db">](https://www.github.com/freanja)
 
 
 
@@ -104,4 +102,8 @@ Anyway，在寒假的末尾花了两三天算是搞完了，总结下整个过�
 
 ----
 
-https://pic.freanja.cn/image/bev
+## 🥳 The End
+
+<h2 style="text-align:center;"><a href="https://www.tumblr.com/blog/view/1041uuu">Awesome 8 Bit</a></h2>
+
+<img src="https://pic.freanja.cn/images/2022/02/18/tumblr_fd1f4b85160a4cdd83c0a23d17ca6029_8b2a21fc_500.gif">
