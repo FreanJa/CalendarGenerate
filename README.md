@@ -100,7 +100,7 @@ Anyway，在寒假的末尾花了两三天算是搞完了，总结下整个过�
 
 ## 🤝 Connect with Me
 
-[<img src="https://img.shields.io/badge/MyBlog-blog.freanja.cn-critical?style=flat&logo=about.me&logoColor=3498db">](https://blog.freanja.cn) [<img src="https://img.shields.io/badge/Email-freanja.l@gmail.com-critical?style=flat&logo=Gmail&logoColor=3498db">](mailto:freanja.l@gamil.com) [<img src="https://img.shields.io/badge/Github-blog.freanja.cn-critical?style=flat&logo=github&logoColor=3498db">](https://www.github.com/freanja)
+[<img src="https://img.shields.io/badge/MyBlog-blog.freanja.cn-critical?style=flat&logo=about.me&logoColor=3498db">](https://blog.freanja.cn) [<img src="https://img.shields.io/badge/Email-freanja.l@gmail.com-critical?style=flat&logo=Gmail&logoColor=3498db">](mailto:freanja.l@gamil.com) [<img src="https://img.shields.io/badge/Github-FreanJa-critical?style=flat&logo=github&logoColor=3498db">](https://www.github.com/freanja)
 
 </br>
 
