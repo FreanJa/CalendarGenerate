@@ -195,7 +195,7 @@ def cal_date(start, during, week):
 def generate_json():
     pdf = input("PDF文件路径:\n")
     start_date = input("开学日期(第一周周一的日期):\n")
-    alarm = input("上课前提醒: (可选项, 默认:[-15M, -30M])\n").split(',')
+    alarm = input("上课前提醒: (可选项, 默认:[15, 30])\n").split(',')
     return json_format(pdf, start_date, alarm)
 
 
