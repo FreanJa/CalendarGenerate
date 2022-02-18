@@ -26,8 +26,6 @@ Apple 全家桶下直接使用系统日历真的太香了，但每学期开学�
 
 </br>
 
-</br>
-
 ## 👩🏻‍🔬 Programming
 
 > 几乎都是逼逼赖赖，建议直接忽略跳过这个Part，有兴趣可以直接看源码
@@ -38,7 +36,9 @@ Apple 全家桶下直接使用系统日历真的太香了，但每学期开学�
 
 ~是的，我爬虫用的不熟😅~
 
+</br>
 
+</br>
 
 总之最后选择了直接读pdf文件，试了几个py的pdf库之后，用了 **pdfplumber**，读中文文档很友好 👍，如果是读中文文档的话非常推荐使用
 
@@ -50,15 +50,13 @@ Apple 全家桶下直接使用系统日历真的太香了，但每学期开学�
 
 Anyway，在寒假的末尾花了两三天算是搞完了，总结下整个过程：
 
-* **JSON部分** 主要就是信息的提取和格式整理~~（好像整个项目都是）~~ 
+* **JSON部分** 主要就是信息的提取和格式整理 ~~好像整个项目都是~~ 
 
 * **ICS部分** 主要是阅读和尝试能否正常使用吧，我是在电脑里面导出之前的日程，然后以此为模版进行修改使用
 
+</br>
 
-
-
-
-
+</br>
 
 ##  💡 How to use
 
@@ -78,27 +76,25 @@ Anyway，在寒假的末尾花了两三天算是搞完了，总结下整个过�
 
 下面跑一次代码，可供参考
 
-<img src="https://github.com/FreanJa/CalendarGenerate/data/pic/202202181653293.png" alt="截屏2022-02-18 16.51.23" style="zoom:40%;" />
+<img src="./data/pic/202202181653293.png" alt="截屏2022-02-18 16.51.23" style="zoom:40%;" />
 
 ⬆️ 运行完成后可以查看给出的路径是否有生成的文件
 
 
 
-<img src="https://github.com/FreanJa/CalendarGenerate/data/pic/202202181654921.png" alt="截屏2022-02-18 16.52.37" style="zoom:40%;" />
+<img src="./data/pic/202202181654921.png" alt="截屏2022-02-18 16.52.37" style="zoom:40%;" />
 
 ⬆️ 点开ics文件，选择 **新建日历**，会自动根据学期创建一个新的日历（当然你也可以选择已有的日历）
 
 
 
-<img src="https://github.com/FreanJa/CalendarGenerate/data/pic/202202181656614.png" alt="截屏2022-02-18 16.52.59" style="zoom:40%;" />
+<img src="./data/pic/202202181656614.png" alt="截屏2022-02-18 16.52.59" style="zoom:40%;" />
 
 ⬆️ 这是导入后的样式，我点开了我那门双周的英语课，你可以在 **每2周重复** 处修改你的重复规则
 
+</br>
 
-
-
-
-
+</br>
 
 <span id="jump"></span>
 
@@ -106,11 +102,9 @@ Anyway，在寒假的末尾花了两三天算是搞完了，总结下整个过�
 
 [<img src="https://img.shields.io/badge/MyBlog-blog.freanja.cn-critical?style=flat&logo=about.me&logoColor=3498db">](https://blog.freanja.cn) [<img src="https://img.shields.io/badge/Email-freanja.l@gmail.com-critical?style=flat&logo=Gmail&logoColor=3498db">](mailto:freanja.l@gamil.com) [<img src="https://img.shields.io/badge/Github-blog.freanja.cn-critical?style=flat&logo=github&logoColor=3498db">](https://www.github.com/freanja)
 
+</br>
 
-
-
-
-
+</br>
 
 ##  💫 The End
 
