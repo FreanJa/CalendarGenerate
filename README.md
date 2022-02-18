@@ -1,5 +1,9 @@
 # 日历生成 CalendarGenerate ( for Zstuer )
 
+https://img.shields.io/badge/PDF2ICS-zstuer-orange?style=flat&logo=python
+
+https://img.shields.io/badge/For-MacOS-blue?style=flat&logo=apple https://img.shields.io/badge/For-iOS-blue?style=flat&logo=apple
+
 > 根据 浙江理工大学 教务系统导出的 pdf 课表 自动生成 .json文件 以及 .ics 文件
 >
 > generate .ics file from pdf (zstu course scheduel format)
@@ -10,65 +14,94 @@ A project that can let ZSTU Educational administration system exported pdf sched
 
 ---
 
-## How to use
 
-* Run **generate_json_file.py** to get json file
 
-  ```Linux
-  ## The Sample input you can use ⬇️
-   ./data/personal_data/2020-2021-2.pdf
-   20210301
-   10,20
-   
-   # Output ⬇️
-  [Success] Save json data in "./generated_file/json/2020-2021-2.json"
-  
-  ```
+## 🤔 Why do this
 
-  <img src="https://pic.freanja.cn/images/2022/02/17/202202172222038.png" alt="截屏2022-02-17 22.21.00" style="zoom: 40%;" />
+Apple 全家桶下直接使用系统日历真的太香了，但每学期开学导课表真的要了命了，无意间少数派看到个[帖子](https://sspai.com/post/39645)提醒了我，我是学 计算机的 ~~菜狗~~ 啊
+
+看了下帖子之后，决定自己也动手写一个，之所以没有直接白嫖 🤲，有几个原因：
+
+* 原作者使用的方法是 先在Execl中输入课程信息，生成json文件，然后将json文件合并生成ics，但是作为 **懒狗** 我连Execl也不想写
+* 原作者生成的日历格式和我想要的不太一样 
+* ~~装 X~~
 
 
 
-* Copy the path of the given json file like:  **./generated_file/json/2020-2021-2.json**
+## 👩🏻‍🔬 Programming
 
-* Run **generate_ics_file.py** to get the folder include ics files
+> 几乎都是逼逼赖赖，建议直接忽略跳过这个Part，有兴趣可以直接看源码
 
-  ```Linux
-  ## The Sample input you can use ⬇️
-  ./generated_file/json/2020-2021-2.json
-  
-  
-  ## Output ⬇️
-  [Success] Generate "./generated_file/ics/2020-2021-2/概率论及数理统计A*★(Mon 3-5).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/计算机组成原理*★(Mon 6-7).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/形势与政策★(Mon 10-11).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/数据、模型与决策-管理软件实践○(Mon 10-12).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/普通物理A2★(Tue 3-5).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/英语国家文化概况★(Tue 6-7).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/创业基础★(Tue 8-9).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/计算机网络*★(Tue 10-12).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/足球(初级)★(Wed 1-2).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/C#程序设计*★(Wed 3-5).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/算法分析与设计*★(Wed 10-12).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/计算机组成原理*★(Thur 1-2).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/JAVA程序设计*★(Thur 3-5).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/职业发展与就业指导★(Thur 6-7).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/概论(2)★(Thur 8-9).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/社会实践○(Thur 10-11).ics"
-  [Success] Generate "./generated_file/ics/2020-2021-2/汇编语言A*★(Fri 6-8).ics"
-  
-  ```
+最开始的时候是没想到直接读pdf文件的，正常人想的应该是爬 ~~教务系统（退学警告）~~
 
-  <img src="https://pic.freanja.cn/images/2022/02/17/202202172236055.png" alt="截屏2022-02-17 22.32.45" style="zoom:40%;" />
+为什么不直接拿网页上的数据？是有什么隐秘🔏么？
+
+~是的，我爬虫用的不熟😅~
 
 
 
-* View the generated ics file
+总之最后选择了直接读pdf文件，试了几个py的pdf库之后，用了 **pdfplumber**，读中文文档很友好 👍，如果是读中文文档的话非常推荐使用
 
-  <img src="https://pic.freanja.cn/images/2022/02/17/202202172240908.png" alt="截屏2022-02-17 22.40.05" style="zoom:40%;" />
+然后就是最痛苦的部分，生成**JSON**文件，我想到过pdf转文字生成的列表会很混乱，没想到会乱成这种，在我整理的要放弃的时候，发现教务系统支持倒出的pdf里面竟然有一种列表样式的，果断换了列表的，磕磕绊绊总算是把JSON文件生成好了。~然后开学已经一个月了，我就再也没点开过这个Project😅~
 
-* Select all and open them. *If you use macos, you can **command+a**, **command+ o***
+寒假又换了台新电脑，开学的时候写的文件忘记备份了，也没传github，好嘛直接重写🥲
 
-* Add all schedules to the calendar you create
 
-  <img src="https://pic.freanja.cn/images/2022/02/17/202202172246491.png" alt="截屏2022-02-17 22.44.36" style="zoom:40%;" />
+
+Anyway，在寒假的末尾花了两三天算是搞完了，总结下整个过程：
+
+* **JSON部分** 主要就是信息的提取和格式整理~~（好像整个项目都是）~~ 
+
+* **ICS部分** 主要是阅读和尝试能否正常使用吧，我是在电脑里面导出之前的日程，然后以此为模版进行修改使用
+
+
+
+##  💡 How to use
+
+> 介绍下怎么使用，虽然感觉没啥好介绍的，之后有空的话🐦会直接在博客上开个接口，上传课表直接返回一个ics
+
+***先声明这是根据浙江理工大学2021-2022学年寒假教务系统下载的学生课表，列表模式进行开发的，pdf转文本有很多奇怪的格式，请参考DATA文件夹下给出的两个pdf文档判断是否适用‼️***
+
+
+
+运行 **main.py** 文件，按照提示进行输入即可，需要注意的是 **开学日期填写第一周的周一的日期！**
+
+默认在上课前15分钟和30分钟提醒两次，如果需要修改输入以 **,** 分割的数字，提醒时间 **暂不提供每门课自定义** ，有需要可以导入日历后在日历中事件第一次出现处修改
+
+另外，因为我的过往课表中就碰到过一次英语课双周，所以只设置了单双周，如果有别的什么奇奇怪怪的上课频率，自己改代码，或者也可以[联系我](#jump)，当然其他问题也等同 ~~pdf转文字出现的格式真的是千奇百怪了~~
+
+
+
+下面跑一次代码，可供参考
+
+<img src="https://pic.freanja.cn/images/2022/02/18/202202181653293.png" alt="截屏2022-02-18 16.51.23" style="zoom:40%;" />
+
+⬆️ 运行完成后可以查看给出的路径是否有生成的文件
+
+
+
+<img src="https://pic.freanja.cn/images/2022/02/18/202202181654921.png" alt="截屏2022-02-18 16.52.37" style="zoom:40%;" />
+
+⬆️ 点开ics文件，选择 **新建日历**，会自动根据学期创建一个新的日历（当然你也可以选择已有的日历）
+
+
+
+<img src="https://pic.freanja.cn/images/2022/02/18/202202181656614.png" alt="截屏2022-02-18 16.52.59" style="zoom:40%;" />
+
+⬆️ 这是导入后的样式，我点开了我那门双周的英语课，你可以在 **每2周重复** 处修改你的重复规则
+
+
+
+<span id="jump"></span>
+
+## 🤝 Connect with Me
+
+[https://img.shields.io/badge/MyBlog-blog.freanja.cn-critical?style=flat&logo=about.me&logoColor=3498db](https://blog.freanja.cn) [https://img.shields.io/badge/Email-freanja.l@gmail.com-critical?style=flat&logo=gmali&logoColor=3498db](mailto:freanja.l@gamil.com) [https://img.shields.io/badge/Github-blog.freanja.cn-critical?style=flat&logo=github&logoColor=3498db](https://www.github.com/freanja)
+
+
+
+## 💫 From [FreanJa](https://github.com/freanja)
+
+----
+
+https://pic.freanja.cn/image/bev
